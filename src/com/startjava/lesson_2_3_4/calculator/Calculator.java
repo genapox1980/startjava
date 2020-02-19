@@ -1,7 +1,7 @@
-package com.startjava.lesson_2_3.calculator;
+package com.startjava.lesson_2_3_4.calculator;
 
 public class Calculator {
-	
+
 	public int calculate(int num1, int num2, char operation) {
 		int result = 0;
 		switch (operation) {
@@ -21,10 +21,7 @@ public class Calculator {
 				result = num1 % num2;
 				break;
 			case '^':
-				int exp = 1;
-				for (int i = 1; i <= num2; i++) {
-					exp *= num1;
-				}
+				int exp = (int) Math.pow(num1, num2);
 				System.out.println(exp);
 				break;
 			default:

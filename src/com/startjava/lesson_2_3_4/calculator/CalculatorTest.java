@@ -1,4 +1,4 @@
-package com.startjava.lesson_2_3.calculator;
+package com.startjava.lesson_2_3_4.calculator;
 
 import java.util.Scanner;
 
@@ -9,17 +9,17 @@ public class CalculatorTest {
 		String continuation;
 
 		do {
-			System.out.print("Введите первое число: ");
-			int num1 = scan.nextInt();
-			System.out.print("Введите знак математической операции: ");
-			char operation = scan.next().charAt(0);
-			System.out.print("Введите второе число: ");
-			int num2 = scan.nextInt();
+			System.out.print("Введите математическое выражение: ");
+			String mathExpression = scan.nextLine();
+			String[] split = mathExpression.split(" ");
+			int num1 = Integer.parseInt(split[0]);
+			int num2 = Integer.parseInt(split[2]);
+			char operation = split[1].charAt(0);
 			System.out.println(calc.calculate(num1, num2, operation));
 			do {
 				System.out.print("Хотите продолжить? [да/нет]: ");
 				continuation = scan.next();
 			} while (!continuation.equals("нет") && !continuation.equals("да"));	 
-		} while (continuation.equals("да"));	
+		} while (continuation.equals("да"));
 	}
 }
