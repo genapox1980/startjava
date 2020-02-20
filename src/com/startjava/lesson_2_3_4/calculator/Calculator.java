@@ -12,7 +12,6 @@ public class Calculator {
 		int num1 = Integer.parseInt(srcMathExpression[0]);
 		int num2 = Integer.parseInt(srcMathExpression[2]);
 		char operation = srcMathExpression[1].charAt(0);
-//		int result = 0;
 		switch (operation) {
 			case '+':
 				System.out.println(num1 + num2);
