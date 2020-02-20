@@ -1,32 +1,39 @@
 package com.startjava.lesson_2_3_4.calculator;
 
 public class Calculator {
+	private String mathExpression;
 
-	public int calculate(int num1, int num2, char operation) {
-		int result = 0;
+	public Calculator(String mathExpression) {
+		this.mathExpression = mathExpression;
+	}
+
+	public void calculate() {
+		String[] srcMathExpression = mathExpression.split(" ");
+		int num1 = Integer.parseInt(srcMathExpression[0]);
+		int num2 = Integer.parseInt(srcMathExpression[2]);
+		char operation = srcMathExpression[1].charAt(0);
+//		int result = 0;
 		switch (operation) {
 			case '+':
-				result = num1 + num2;
+				System.out.println(num1 + num2);
 				break;
 			case '-':
-				result = num1 - num2;
+				System.out.println(num1 - num2);
 				break;
 			case '*':
-				result = num1 * num2;
+				System.out.println(num1 * num2);
 				break;
 			case '/':
-				result = num1 / num2;
+				System.out.println(num1 / num2);
 				break;
 			case '%':
-				result = num1 % num2;
+				System.out.println(num1 % num2);
 				break;
 			case '^':
-				int exp = (int) Math.pow(num1, num2);
-				System.out.println(exp);
+				System.out.println((int) Math.pow(num1, num2));
 				break;
 			default:
 				System.out.println("Неверный знак математической операции");	
 		}
-		return result;
 	}
 }
