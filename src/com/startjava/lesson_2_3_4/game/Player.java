@@ -18,7 +18,7 @@ public class Player {
 	}
 
 	public int getNumber() {
-		return number;
+		return numbers[countAttempts];
 	}
 
 	public void setNumber(int number) {
@@ -36,7 +36,7 @@ public class Player {
 	}
 
 	void clear() {
-		Arrays.fill(numbers, 0, (countAttempts + 1), 0);
+		Arrays.fill(numbers, 0, (countAttempts), 0);
 		countAttempts = -1;
 	}
 }
