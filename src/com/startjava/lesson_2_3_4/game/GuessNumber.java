@@ -43,16 +43,16 @@ public class GuessNumber {
 		} else {
 			System.out.println("Вы угадали!");
 			System.out.println("Игрок " + (currentGamer.getName()) + " закончил игру угадав число " + (currentGamer.getNumber()) +
-					" c " + (currentGamer.getCountAttempts() + 1) + " попытки");
+					" c " + (currentGamer.getCountAttempts()) + " попытки");
 			return true;
 		}
 		return false;
 	}
 
 	private boolean checkAttempts() {
-		if (gamer1.getCountAttempts() == 9 && gamer2.getCountAttempts() < 9) {
+		if (gamer1.getCountAttempts() == 10 && gamer2.getCountAttempts() < 10) {
 			System.out.println("У игрока " + gamer1.getName() + " закончились попытки!");
-		}  else if (gamer2.getCountAttempts() == 9) {
+		}  else if (gamer2.getCountAttempts() == 10) {
 			System.out.println("У игрока " + gamer2.getName() + " закончились попытки!");
 			return false;
 		}
@@ -60,11 +60,6 @@ public class GuessNumber {
 	}
 
 	private void printNumbers(Player currentGamer) {
-		int[] numbers = Arrays.copyOf(currentGamer.getNumbers(), (currentGamer.getCountAttempts() + 1));
-		System.out.println("Введенные числа игрока " + currentGamer.getName() + " : " );
-		for (int i = 0; i <= currentGamer.getCountAttempts(); i++) {
-			System.out.print(numbers[i] + " ");
-		}
-		System.out.println();
+		System.out.println("Введенные числа игрока " + currentGamer.getName() + ": " + Arrays.toString(currentGamer.getNumbers()));
 	}
 }
