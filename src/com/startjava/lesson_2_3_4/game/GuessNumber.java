@@ -42,8 +42,8 @@ public class GuessNumber {
 			System.out.println("Введенное вами число меньше того, что загадал компьютер");
 		} else {
 			System.out.println("Вы угадали!");
-			System.out.println("Игрок " + (currentGamer.getName()) + " закончил игру угадав число " + (currentGamer.getNumber()) +
-					" c " + (currentGamer.getCountAttempts()) + " попытки");
+			System.out.println("Игрок " + currentGamer.getName() + " закончил игру угадав число " + currentGamer.getNumber() +
+					" c " + currentGamer.getCountAttempts() + " попытки");
 			return true;
 		}
 		return false;

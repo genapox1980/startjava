@@ -21,13 +21,12 @@ public class Player {
 	}
 
 	public void setNumber(int number) {
-		countAttempts++;
 		numbers[countAttempts] = number;
-
+		countAttempts++;
 	}
 
 	public int[] getNumbers() {
-		return Arrays.copyOf(numbers, (countAttempts));
+		return Arrays.copyOf(numbers, countAttempts);
 	}
 
 	public int getCountAttempts() {
@@ -35,7 +34,7 @@ public class Player {
 	}
 
 	void clear() {
-		Arrays.fill(numbers, 0, (countAttempts), 0);
+		Arrays.fill(numbers, 0, countAttempts, 0);
 		countAttempts = 0;
 	}
 }
