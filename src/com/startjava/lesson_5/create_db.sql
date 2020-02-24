@@ -1,5 +1,5 @@
 CREATE TABLE jaegers;
-	id              SERIAL PRIMARY KEY,
+    id              SERIAL PRIMARY KEY,
     modelName       TEXT,
     mark            TEXT,
     height          double precision,
